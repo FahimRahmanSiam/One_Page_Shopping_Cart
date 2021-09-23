@@ -27,7 +27,7 @@ export default function Products({products,setProducts,cartItems,setCartItems,ad
                                 <li><div className="productPrice">${product.price}</div></li>
                                 {// the buttonClicked holds the current product id that clicked the button ADD to Cart
                                     buttonClicked===product.id ? //if it matches with the present array's product then render the + and - button under that product
-                                    (<div ><i className='fa fa-plus-circle' onClick={()=>addToCart(product)}></i> <input type="number" readOnly={true}  name="prodCount"></input> <i className='fa fa-minus-circle' onClick={()=>removeFromCart(product)}></i></div>)
+                                    (<div ><i className='fa fa-plus-circle' onClick={()=>addToCart(product)}></i> <input type="text" readOnly={true}  name="prodCount"></input> <i className='fa fa-minus-circle' onClick={()=>removeFromCart(product)}></i></div>)
                                     : //otherwise show the ADD to Cart Button for that product
                                     (<li><button className="addToCartButton" onClick={()=>buttonClickHandler(product)}>ADD TO CART</button></li>)
                                 }
